@@ -5,3 +5,27 @@
 body{
     font-family: arial;
 }
+
+/*header*/
+.site-header{
+    background-image: url(realEstate-img-main/header.jpg);
+    background-size: cover;
+    height: 400px;
+    text-align: center;
+    color: white;
+}
+.site-header a{
+    display: inline-block;
+    margin-right: 20px;
+    text-decoration: none;
+    color: white;
+    margin-bottom: 10px;
+}
+
+/*menu nav*/
+.nav-menu-bar{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
+}
