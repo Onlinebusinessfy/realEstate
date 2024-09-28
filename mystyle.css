@@ -20,6 +20,11 @@ h1,h2,h3{
     width: 80%;
     margin: 0 auto;
 }
+@media(max-width:768px){
+    .container{
+        width: 95%;
+    }
+}
 .btn{
     display: block;
     background-color: orange;
@@ -40,7 +45,6 @@ h1,h2,h3{
 }
 .site-header a{
     color: white;
-
 }
 .bar-menu{
     display: flex;
@@ -52,6 +56,21 @@ h1,h2,h3{
     margin-right: 30px;
 }
 
+@media(max-width:768px) {
+    .bar-menu{
+        flex-direction: column;
+        height: 200px;
+    }
+    .menu{
+        display: flex;
+        flex-direction: column;
+    }
+    .menu a{
+        margin-bottom: 20px;
+        text-align: center;
+    }
+}
+
 /*about*/
 .about-container{
     display: flex;
@@ -60,37 +79,59 @@ h1,h2,h3{
 .about-item{
     margin-right: 5%;
 }
-/*houses*/
 
+@media(max-width:768px){
+    .about-container{
+        flex-direction: column;
+    }
+    .about-item{
+        margin-right: 0;
+    }
+    .about-item h3{
+        text-align: center;
+    }
+    .about-item img{
+        display: block;
+        margin: 20px auto;
+    }
+    h2{
+        text-align: center;
+    }
+}
+/*houses*/
+.houses-container{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
 .house-item{
     background-color: #dedede;
     padding: 10px;
     margin-bottom: 20px;
-    margin-right: 20px;
     border-radius: 5px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    flex-basis: 30%;
+    box-sizing: border-box;
 }
 .house-item img{
     width: 100%;
     height: 300px;
+    object-fit: cover;
 }
 .price{
     color: green;
     font-weight: bold;
-}
-.houses-item-text{
-    padding: 20x;
 }
 .icon-container{
     display: flex;
     align-items: center;
 }
 .icon-container img{
-    width: 100%;
+    width: 20px;
     height: auto;
-    margin-right: 20px;
+    margin-right: 10px;
 }
 .icon-list{
     display: flex;
@@ -105,6 +146,27 @@ h1,h2,h3{
     font-size: 14px;
     line-height: 1;
 }
+
+@media(max-width: 768px){
+    .houses-container{
+        flex-direction: column;
+        align-items: center;
+    }
+    .house-item{
+        width: 90%;
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+    .icon-container{
+        margin-top: 20px;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .icon-container img{
+        margin-right: 5px;
+    }
+}
+
 /*menu nav*/
 .nav-menu-bar{
     display: flex;
@@ -206,7 +268,7 @@ fieldset{
     border: 1px solid black;
     border-radius: 50%;
     width: 20px;
-    padding: 10px;
+    padding: 20px;
     margin-right: 20px;
 }
 .privacy-text{
@@ -218,4 +280,98 @@ fieldset{
     margin-left: 10px;
     text-decoration: underline;
     font-weight: 900;
+}
+
+/*About page*/
+.info-section {
+    display: inline-block;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.info-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.info-content h3{
+    text-align: center;
+    font-size: 20px;
+}
+
+.info-section img {
+    width: 45%;
+    height: 400px;
+    margin-right: 30px;
+    margin-left: 30px;
+    border: 10px solid black;
+    padding: 5px;
+    object-fit: cover;
+}
+
+.info-content p{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.text-details {
+    width: 50%;
+}
+
+.reverse-text .info-content{
+    flex-direction: row-reverse;
+}
+@media (max-width: 768px) {
+    .info-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .info-content{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .info-content img, .text-details {
+        width: 80%;
+        height: auto;
+        margin: 10px 0;
+    }
+
+    .text-details{
+        width: 90%;
+        text-align: center;
+    }
+
+    .reverse-text .info-content{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/*Blog-page*/
+.blog-fit{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.blog-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.blog-card {
+    background: #f9f9f9;
+    border-radius: 8px;
+    padding: 15px;
+    width: 500px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.blog-card h4 {
+    margin-top: 10px;
 }
